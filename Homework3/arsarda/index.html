@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html style="width: 100%; height: 100%">
+  <head>
+    <meta charset="utf-8" />
+    <title>ECS163 HW3 Dashboard</title>
+    <style>
+      /* Basic styling for navigation buttons */
+      button {
+        padding: 10px 20px;
+        background-color: #add8e6;
+        border: none;
+        color: black;
+        font-size: 16px;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #0056b3;
+      }
+
+      button:active {
+        background-color: #004494;
+      }
+    </style>
+  </head>
+  <body style="width: 100%; height: 100%; margin: 0; display: flex; flex-direction: column; justify-content: center">
+    <!-- Navigation controls to toggle views -->
+    <div id="nav-controls" style="display: flex; justify-content: space-evenly; align-items: center; width: 100vw; height: 10vh">
+      <button style="width: 10vw" id="prevBtn">Previous</button>
+      <button style="width: 10vw" id="nextBtn">Next</button>
+    </div>
+
+    <!-- Container for each visualization view -->
+    <div id="view1" class="chart-view" style="display: flex">
+      <svg id="svg1" style="width: 100vw; height: 90vh"></svg>
+    </div>
+    <div id="view2" class="chart-view" style="display: none">
+      <svg id="svg2" style="width: 100vw; height: 90vh"></svg>
+    </div>
+    <div id="view3" class="chart-view" style="display: none">
+      <svg id="svg3" style="width: 100vw; height: 90vh"></svg>
+    </div>
+
+    <!-- Load D3 and custom JS -->
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
